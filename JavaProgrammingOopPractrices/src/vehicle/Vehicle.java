@@ -2,10 +2,10 @@ package vehicle;
 
 public class Vehicle {
 	//instance variable
-	public String name = "";
-	public String color = "";
-	public String model = "";
-	public String company = "";
+	private String name = "";
+	private String color = "";
+	private String model = "";
+	private String company = "";
 	
 	//empty constructor
 	public Vehicle(){		
