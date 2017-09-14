@@ -6,17 +6,23 @@ public class Vehicle {
 	private String color = "";
 	private String model = "";
 	private String company = "";
+	private String engine = "800";
+	public static int count = 0;//this variable will able to track how many we created in the factory eg-mobile,car,how many empoyee etc
 	
 	//empty constructor
-	public Vehicle(){		
+	public Vehicle(){	
+		count++;//this variable will able to track how many object we created in the factory eg-mobile,car,how many empoyee etc
+				//and it will reflect all the object
 	}
 	
 	//constructor with parameters
-	public Vehicle(String name, String color, String model, String complany){
+	public Vehicle(String name, String color, String model, String complany, String engine){
 		this.name = name;
 		this.color = color;
 		this.model = model;
 		this.company = company;
+		this.engine = engine;
+		count++;
 	}
 
 	/**
@@ -75,5 +81,33 @@ public class Vehicle {
 		this.company = company;
 	}
 
+	/**
+	 * @return the engine
+	 */
+	private String getEngine() {
+		return engine;
+	}
+
+	/**
+	 * @param engine the engine to set
+	 */
+	private void setEngine(String engine) {
+		this.engine = engine;
+	}
+
+	//getting the speed value will use getEngine function
+	public int getSpeed(){
+		String a = getEngine();
+		if (a == "800"){
+			return 90;
+		}
+		else{
+			return 120;
+		}
+	}
+	
+	public static String getVehicle(){
+		return "You have set the vehicle name and color.";
+	}
 	
 }
