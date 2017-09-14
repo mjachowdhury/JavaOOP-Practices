@@ -22,9 +22,20 @@ public class VehicleMain {
 		//I am calling directly Vehicle class as I have created static function of it in the Vehicle class.
 		System.out.println(Vehicle.getVehicle());*/
 		
-		Car car1 = new Car("Toyota", "White","2017","Toyota","900",true, false);
+		/*Car car1 = new Car("Toyota", "White","2017","Toyota","900",true, false);
 		car1.setLedScreen(false);
-		System.out.println(car1.getName());
+		System.out.println(car1.getName());*/
+		
+		//polymorphism example
+		
+		Vehicle vehicle1 = new Vehicle("Toyota", "White","2017","Toyota","900");
+		System.out.println(vehicle1.getInfo());
+		
+		Vehicle vehicle2 = new Car("Toyota", "White","2017","Toyota","900",true, false);
+		System.out.println(vehicle2.getInfo());
+		
+		Vehicle vehicle3 = new Bike("Toyota", "White","2017","Toyota","900",true);
+		System.out.println(vehicle3.getInfo());
 	}
 
 }

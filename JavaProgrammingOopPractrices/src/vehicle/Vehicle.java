@@ -106,6 +106,10 @@ public class Vehicle {
 		}
 	}
 	
+	public String getInfo(){
+		return "This is a Vehicle";
+	}
+	
 	public static String getVehicle(){
 		return "You have set the vehicle name and color.";
 	}

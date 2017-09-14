@@ -50,6 +50,8 @@ public class Car extends Vehicle{
 		return "Your vehicle name is :"+super.getName();
 	}
 	
-	
+	public String getInfo(){
+		return "This is a Car";
+	}
 
 }
